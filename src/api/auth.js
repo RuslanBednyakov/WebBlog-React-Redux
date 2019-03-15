@@ -2,7 +2,7 @@ import api from '../sevices/api';
 
 
 export function login (auth) {
-  return api.post('auth/login', auth)
+  return api.post('auth/sign-in', auth)
     .then((r) => r.data)
     .catch( err => { throw err } )
 }

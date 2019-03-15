@@ -22,16 +22,9 @@ class Api {
   post(url, _data = {}) {
       
     return  new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve({data: {
-          token: '21jkjfho34o3i9rtiw3rj2lknfsd',
-          user: _data,
-          url: path.BASE_URL + path.BASE_API + url
-        }});
-      }, 2000);
-      // axios.post(path.BASE_URL + path.BASE_API + url, _data)
-        // .then(({data}) => resolve(data))
-        // .catch(error => reject(error));
+      axios.post(path.BASE_URL + path.BASE_API + url, _data)
+        .then(({data}) => resolve(data))
+        .catch(error => reject(error));
     });
   }
 

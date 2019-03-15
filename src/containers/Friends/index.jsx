@@ -23,8 +23,8 @@ class Friends extends Component {
   }
 
   componentDidMount() {
-    const {user, getListFriends} = this.props;
-    getListFriends(user.user_id);
+    const {getListFriends} = this.props;
+    getListFriends();
   }
 
   render(){
