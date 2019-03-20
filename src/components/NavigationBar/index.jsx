@@ -26,9 +26,9 @@ class NavigationBar extends Component {
             <li className="menu__list_item myFriends">
               <NavLink to="/friends" className="menu__list_item-link">My Friends</NavLink>
             </li>
-            <li className="menu__list_item chat">
+            {/* <li className="menu__list_item chat">
               <NavLink to="/chat" className="menu__list_item-link">Chat</NavLink>
-            </li>
+            </li> */}
             <li className="menu__list_item logOut">
               <NavLink to="/log-out" className="menu__list_item-link">Log Out</NavLink>
             </li>

@@ -11,7 +11,7 @@ export const getListUsers = (char) => (dispatch) => {
   .then( data => {
     dispatch({
       type: Const.GET_LIST_USERS_SUCCESS,
-      data: data.users
+      data: data.data.rows
     })
   })
   .catch( err => {
@@ -32,7 +32,7 @@ export const getListFriends = (id) => (dispatch) => {
   .then( data => {
     dispatch({
       type: Const.GET_LIST_FRIENDS_SUCCESS,
-      data: data.users
+      data: data
     })
   })
   .catch( err => {

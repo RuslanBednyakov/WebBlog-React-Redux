@@ -23,7 +23,7 @@ class UserProfile extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.userSettings
+    user: state.userSettings.user
   }
 }
 

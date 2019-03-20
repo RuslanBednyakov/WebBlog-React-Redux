@@ -4,7 +4,7 @@ import React from 'react';
 const User = (props) => {
 
   const { user } = props;
-
+  
   return (
     <div className='user'>
       <div className="user__avatar">{user.avatar}</div>

@@ -28,9 +28,10 @@ const posts = (state = initialState, action) => {
         isLoading: false
       }
     case Const.SAVE_NEW_POST_SUCCESS:
+     let ownPosts = state.ownPosts.concat(action.data)
       return {
         ...state,
-        ownPosts: action.data,
+        ownPosts: ownPosts,
         isLoading: false
       }  
     case Const.DISPLAY_ERROR:

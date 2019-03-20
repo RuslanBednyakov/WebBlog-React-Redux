@@ -23,12 +23,13 @@ class Friends extends Component {
   }
 
   componentDidMount() {
-    const {getListFriends} = this.props;
-    getListFriends();
+    const {getListFriends, user} = this.props;
+    getListFriends(user.user_id);
   }
 
   render(){
     const {friends} = this.props;
+    console.log('-----', friends)
     const rows = friends ? this.createRows() : null;
     return (
       <div className="friends__container">
@@ -44,7 +45,7 @@ class Friends extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.userSettings,
+    user: state.userSettings.user,
     friends: state.users.listFriends
   }
 }

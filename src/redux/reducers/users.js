@@ -8,7 +8,6 @@ const initialState = {
 const users  = (state = initialState, action) => {
   const {type, data} = action;
   let listFriends;
-
   switch (type) {
 
     case Const.GET_LIST_USERS_SUCCESS:

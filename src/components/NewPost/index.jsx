@@ -32,6 +32,10 @@ class NewPost extends Component {
 
     if (content && title) {
       this.props.savePost(data);
+      this.setState({
+        title: '',
+        content: ''
+      })
     } else {
       this.setState({errorMessage: 'Please enter all fields'})
     }

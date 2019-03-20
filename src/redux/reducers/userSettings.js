@@ -9,6 +9,7 @@ const initialState = {
 }
 
 const userSettings = (state = initialState, action) => {
+
   switch (action.type) {
 
     case Constants.LOGIN_SUCCESS:
@@ -17,13 +18,11 @@ const userSettings = (state = initialState, action) => {
       return {...state, ...action.data, isAuthenticated: !Helper.empty(token)}
       
     case Constants.USER_SET_TOKEN:
-    console.log('reducer set token', action.data)
       setAuthorizationToken(action.data)
       return {...state, ...action.data, isAuthenticated: !Helper.empty(action.data.token)}
 
     case Constants.USER_LOGOUT:
       setAuthorizationToken()
-      console.log('state', state);
       return {
         ...state,
         isAuthenticated: false

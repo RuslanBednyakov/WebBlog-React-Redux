@@ -93,7 +93,7 @@ class SignUp extends Component {
     const token = localStorage.getItem('token');
     if(user.isAuthenticated || !!token){
       return  (
-        <Redirect to="/"/>
+        <Redirect to="/my-page"/>
       )
     }
     return (

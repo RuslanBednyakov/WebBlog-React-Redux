@@ -14,12 +14,12 @@ class SearchUsers extends Component {
 
   onChange = (e) => {
     let value = e.target.value;
-    this.props.getListUsers(this.state.search)
-    this.setState({[e.target.name]: value});
+    this.setState({search: value});
   };
 
   searchUsers = () => {
-    console.log('search')
+    console.log('search', this.state.search)
+    this.props.getListUsers({name: this.state.search})
     this.props.history.push('/search')
   };
 

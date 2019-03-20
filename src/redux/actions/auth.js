@@ -4,10 +4,8 @@ import * as Helper  from '../../helpers/Helpers'
 import axios from 'axios'
 
 export const signUp = (data) => (dispatch) => {
-  console.log('SignUpa', data)
   API.auth.signUp(data)
   .then(data => {
-    console.log('Sucssed', data)
     dispatch({
       type: Const.SIGN_UP_SUCCESS,
       data
@@ -56,7 +54,6 @@ export function setUser (data) {
 }
 
 export function setAuthorizationToken (response) {
-  console.log('action set token', response)
 
   if (Helper.empty(response) || Helper.empty(response.token)) {
     delete axios.defaults.headers.common['Authorization'];
